@@ -46,10 +46,16 @@
   <slot />
 </RouteTransition>
 
-<Footer {...navigation.footer} />
+<Footer
+  class="bg-neutral-200/50 dark:bg-transparent"
+  {...navigation.footer} />
 
-<Navbar {...navigation.navbar} />
+<Navbar
+  class="bg-neutral-50 dark:bg-transparent
+         fixed:bg-neutral-700/80 dark:fixed:bg-slate-700/80
+         shadow-md fixed:shadow-lg"
+  {...navigation.navbar} />
 
-<ScreenBlock class="bg-slate-800" />
+<ScreenBlock class="bg-neutral-100 dark:bg-gray-800" />
 
 <YandexMetrikaInit />

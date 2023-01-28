@@ -29,6 +29,13 @@
     "home-simple-twotone",
     "loading-twotone-loop"
   ],
+  "svg-spinners": [
+    "180-ring-with-bg",
+    "8-dots-rotate",
+    "clock",
+    "dot-revolve",
+    "wind-toy"
+  ],
   "mdi": [
     "cube",
     "cube-outline",
