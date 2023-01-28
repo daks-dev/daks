@@ -11,6 +11,7 @@
   import app from '$lib/configs/app';
   import navigation from '$lib/configs/navigation';
 
+  // window.matchMedia('(prefers-color-scheme: dark)').matches
   if (!import.meta.env.SSR) {
     if (!('color-theme' in localStorage)) {
       localStorage.setItem('color-theme', 'dark');

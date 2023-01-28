@@ -21,12 +21,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'loading-data': 'url(daks-svelte/assets/icons/loading/data.svg)'
+        'loading-data': 'url(daks-svelte/assets/icons/spinners/blocks-scale.svg)'
       }
     }
   },
 
-  plugins: [
-    fixed
-  ]
+  plugins: [fixed]
 };
