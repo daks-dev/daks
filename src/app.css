@@ -42,7 +42,7 @@
   .title {
     @apply after:content-null after:block after:mt-4
            after:w-[25vw] sm:after:w-[20vw] lg:after:w-[15vw] 2xl:after:w-[10vw] after:h-[5px]
-           after:bg-blue-800;
+           after:bg-cyan-600 after:dark:bg-cyan-700;
   }
 
   body.overflow-hidden,
