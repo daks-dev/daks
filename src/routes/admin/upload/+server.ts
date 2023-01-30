@@ -1,5 +1,4 @@
 import { building } from '$app/environment';
-
 import upload from 'daks-svelte/ui/iconify/upload';
 
 export const prerender = false;

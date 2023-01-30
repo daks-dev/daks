@@ -25,8 +25,13 @@
     "home-simple",
     "home-simple-twotone"
   ],
+  "mdi": [
+    "transfer-up"
+  ],
   "svg-spinners": [
-    "8-dots-rotate"
+    "180-ring-with-bg",
+    "8-dots-rotate",
+    "clock"
   ],
   "wpf": [
     "search"

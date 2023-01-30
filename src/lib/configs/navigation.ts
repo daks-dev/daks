@@ -18,12 +18,12 @@ const config = {
     },
     links: [
       {
-        href: '/admin',
-        label: 'ic:outline-settings'
+        href: '/privacy',
+        label: 'Конфиденциальность'
       },
       {
-        href: '/privacy',
-        label: 'Политика конфиденциальности'
+        href: '/admin',
+        label: 'ic:outline-settings'
       }
     ]
   }

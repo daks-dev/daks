@@ -7,7 +7,7 @@ bundles.forEach((bundle: any) => addCollection(bundle));
 const custom: string[] = [
   // 'svelte-logo'
   // 'bars-scale-bottom',
-  // 'blocks-scale',
+  'blocks-scale'
   // 'blocks-wave'
   // 'dots-scale-rotate'
 ];
@@ -15,7 +15,7 @@ const custom: string[] = [
 
 // import './custom/svelte-logo';
 // import './custom/bars-scale-bottom';
-// import './custom/blocks-scale';
+import './custom/blocks-scale';
 // import './custom/blocks-wave';
 // import './custom/dots-scale-rotate';
 

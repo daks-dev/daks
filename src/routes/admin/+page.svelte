@@ -10,7 +10,7 @@
 
   const upload = async () => {
     waiting = true;
-    const response = await fetch('/admin/iconify', {
+    const response = await fetch('/admin/upload', {
       method: 'GET',
       headers: {
         accept: 'application/json'
@@ -22,15 +22,13 @@
     } else alert('Ошибка HTTP: ' + response.status);
     setTimeout(() => (waiting = false), 300);
   };
-
-  //afterUpdate(upload);
 </script>
 
 <svelte:head>
   <meta
     name="robots"
     content="noindex, follow" />
-  <title>DAKS • Iconify</title>
+  <title>DAKS PKG • Iconify</title>
 </svelte:head>
 
 <main>

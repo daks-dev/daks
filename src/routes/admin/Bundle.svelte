@@ -10,7 +10,9 @@
   };
 </script>
 
-<div class="grid grid-cols-5 gap-8 py-4">
+<div
+  class="grid gap-8 py-4
+         grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
   {#each icons as icon}
     {@const name = `${prefix}:${icon}`}
     <figure
@@ -21,9 +23,8 @@
       data-icon={name}>
       <Icon
         icon={name}
-        class="disabled"
-        width="144"
-        height="144" />
+        class="disabled
+               w-24 h-24 md:w-32 md:h-32 xl:w-36 xl:h-36" />
       <figcaption class="disabled text-center text-sm">
         <b class="block text-slate-500">{prefix}</b>
         {icon}
