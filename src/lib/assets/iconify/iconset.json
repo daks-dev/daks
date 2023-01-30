@@ -1,6 +1,6 @@
 {
   "ic": [
-    "outline-location-on",
+    "outline-settings",
     "round-close",
     "round-arrow-forward-ios",
     "round-arrow-right",
@@ -9,11 +9,9 @@
     "round-check-box",
     "round-check-box-outline-blank",
     "round-chevron-right",
-    "round-mail-outline",
     "round-menu",
     "round-minus",
     "round-more-vert",
-    "round-phone-in-talk",
     "round-plus",
     "round-search",
     "round-search-off",
@@ -25,21 +23,10 @@
   "line-md": [
     "github-loop",
     "home-simple",
-    "home-simple-filled",
-    "home-simple-twotone",
-    "loading-twotone-loop"
+    "home-simple-twotone"
   ],
   "svg-spinners": [
-    "180-ring-with-bg",
-    "8-dots-rotate",
-    "clock",
-    "dot-revolve",
-    "wind-toy"
-  ],
-  "mdi": [
-    "cube",
-    "cube-outline",
-    "transfer-up"
+    "8-dots-rotate"
   ],
   "wpf": [
     "search"
