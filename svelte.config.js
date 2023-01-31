@@ -22,6 +22,7 @@ const config = {
 
   kit: {
     alias: {
+      // $assets: resolve(__dirname, 'static'),
       $iconify: resolve(__dirname, 'src/lib/assets/iconify')
     },
 

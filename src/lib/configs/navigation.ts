@@ -14,7 +14,7 @@ const config = {
   footer: {
     copylink: {
       href: '/',
-      label: 'DAks&nbsp;DEV'
+      label: 'DAKS&nbsp;DEV'
     },
     links: [
       {
