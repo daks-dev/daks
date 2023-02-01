@@ -1,6 +1,6 @@
 <script lang="ts">
   import LazyLoad from 'vanilla-lazyload';
-  import { Navbar, Footer, ScreenBlock, RouteTransition, YandexMetrikaInit } from 'daks-svelte';
+  import { YandexMetrikaInit, RouteTransition, Footer, Navbar, ScreenBlock } from 'daks-svelte';
 
   import '../app.css';
   import '$iconify';
