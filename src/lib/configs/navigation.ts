@@ -8,6 +8,10 @@ const config = {
       {
         href: '/tailwindcss',
         label: 'Tailwind CSS'
+      },
+      {
+        href: '/lightbox',
+        label: 'Lightbox'
       }
     ]
   },
