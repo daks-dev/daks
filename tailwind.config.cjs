@@ -1,9 +1,3 @@
-const plugin = require('tailwindcss/plugin');
-
-const fixed = plugin(function ({ addVariant }) {
-  addVariant('fixed', ['&.fixed', '.fixed &']);
-});
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -24,7 +18,5 @@ module.exports = {
         'loading-data': 'url(daks-svelte/assets/icons/spinners/blocks-scale.svg)'
       }
     }
-  },
-
-  plugins: [fixed]
+  }
 };

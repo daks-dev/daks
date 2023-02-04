@@ -10,8 +10,35 @@ const config = {
         label: 'Tailwind CSS'
       },
       {
-        href: '/lightbox',
-        label: 'Lightbox'
+        href: '/components',
+        label: 'Components',
+        links: [
+          {
+            href: '/carousel',
+            label: 'Carousel'
+          },
+          {
+            href: '/lightbox',
+            label: 'Lightbox'
+          },
+          {
+            href: '/dropdown',
+            label: 'Dropdown'
+          },
+          {
+            href: '/select',
+            label: 'Selet'
+          }
+        ],
+        pages: [
+          '/tailwindcss',
+          '/svelte',
+          '/components',
+          '/components/carousel',
+          '/components/lightbox',
+          '/components/dropdown',
+          '/components/select'
+        ]
       }
     ]
   },

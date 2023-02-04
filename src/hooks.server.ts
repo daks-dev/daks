@@ -6,7 +6,8 @@ import { handle as _handle } from 'daks-svelte/app';
 import.meta.env.DEV && (await import('daks-svelte/ui/iconify/server'));
 
 const redirects: any = {
-  // '': ''
+  '/carousel': '/components/carousel',
+  '/lightbox': '/components/lightbox'
 };
 
 export const handle: Handle = async ({ event, resolve }) => {

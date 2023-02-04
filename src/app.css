@@ -60,7 +60,7 @@
 
 main,
 [role='main'] {
-  @apply flex flex-col;
+  @apply flex flex-col mb-4;
   padding-top: var(--navbar-height);
 }
 main > header,
