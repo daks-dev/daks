@@ -1,20 +1,15 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import type { MenuItem, NavLink } from 'daks-svelte';
-  import { YandexMetrikaHit, Dropdown, Select } from 'daks-svelte';
+  import { YandexMetrikaHit, Dropdown, Select, type NavItem } from 'daks-svelte';
 
-  const items: (MenuItem | NavLink)[][] = [
-    [{ label: 'Link 0 0', href: '#dropdown' }],
-    [
-      { label: 'Link 1 0', href: '#dropdown' },
-      { name: 'Button 1 1', handle: () => alert('handle click 1 1') }
-    ],
-    [
-      { label: 'Link 2 0', href: '#dropdown' },
-      { label: 'Link 2 1', href: '#dropdown' },
-      { name: 'Button 2 2', handle: () => alert('handle click 2 2') }
-    ],
-    [{ label: 'Link 3 0', href: '#dropdown' }]
+  const items: NavItem[] = [
+    { label: 'Link 0 0', href: '#' },
+    { label: 'Link 1 0', href: '#' },
+    { label: 'Button 1 1', handle: () => alert('handle click 1 1') },
+    { label: 'Link 2 0', href: '#' },
+    { label: 'Link 2 1', href: '#' },
+    { label: 'Button 2 2', handle: () => alert('handle click 2 2') },
+    { label: 'Link 3 0', href: '#' }
   ];
 
   const title = 'DAKS • Tailwind CSS';

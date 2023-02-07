@@ -8,7 +8,7 @@
   import type { PageData } from './$types';
   export let data: PageData;
 
-  import { app, navigation } from '$lib/configs';
+  import { app, nav } from '$lib/configs';
 
   // window.matchMedia('(prefers-color-scheme: dark)').matches
   if (!import.meta.env.SSR) {
@@ -48,15 +48,15 @@
 
 <Footer
   class="bg-neutral-200/50 dark:bg-inherit"
-  {...navigation.footer}>
+  {...nav.footer}>
   DAKS&nbsp;DEV
 </Footer>
 
 <Navbar
   class="bg-neutral-50 dark:bg-inherit
-         onscroll:bg-neutral-700/90 dark:onscroll:bg-slate-700/90
+         onscroll:bg-neutral-50/95 dark:onscroll:bg-slate-700/95
          shadow-sm dark:shadow-md onscroll:shadow-lg"
-  {...navigation.navbar} />
+  {...nav.navbar} />
 
 <ScreenBlock class="bg-neutral-100 dark:bg-gray-800" />
 

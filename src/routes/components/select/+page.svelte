@@ -3,8 +3,8 @@
   import { YandexMetrikaHit, Select } from 'daks-svelte';
 
 
-  const title = 'DAKS • Select';
-  const description = 'DAKS: select';
+  const title = 'DAKS • Dropdown Select';
+  const description = 'DAKS: dropdown select';
 
   onMount(() => document?.lazyloadInstance?.update());
 </script>
@@ -15,12 +15,13 @@
 
 <main itemprop="mainContentOfPage">
   <header class="content">
-    <h1 class="title mb-2">Select</h1>
+    <h1 class="title mb-2">Dropdown Select</h1>
   </header>
 
-  <div class="content mb-16">
+  <section class="content mb-16">
+    <h1 class="mb-8 text-2xl">Select...</h1>
     <Select />
-  </div>
+  </section>
 
   <div class="content space-y-4">
     {#each Array(21) as val, key}

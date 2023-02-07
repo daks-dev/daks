@@ -22,8 +22,8 @@ const config = {
             label: 'Lightbox'
           },
           {
-            href: '/dropdown',
-            label: 'Dropdown'
+            href: '/menu',
+            label: 'Menu'
           },
           {
             href: '/select',
