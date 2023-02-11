@@ -1,11 +1,16 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { YandexMetrikaHit } from 'daks-svelte';
+  import { YandexMetrikaHit, Dropdown, Select, type NavItem } from 'daks-svelte';
 
-  const title = 'DAKS • Components';
-  const description = 'DAKS: components';
+  const items: NavItem[] = [
+    { label: 'Link', href: '/#' },
+    { label: 'Button', handle: () => setTimeout(() => alert('Handle 0'), 300) }
+  ];
 
-  onMount(() => document?.lazyloadInstance?.update());
+  const title = 'DAKS • Dropdown';
+  const description = 'DAKS: dropdown';
+
+  onMount(() => document?.lazyload?.update());
 </script>
 
 <YandexMetrikaHit
@@ -14,12 +19,19 @@
 
 <main itemprop="mainContentOfPage">
   <header class="content">
-    <h1 class="title mb-2">Components</h1>
+    <h1 class="title mb-2">Dropdown</h1>
   </header>
 
-  <div class="content space-y-4">
-    {#each Array(21) as val, key}
-      <div>{key + 1} {val || '...'}</div>
-    {/each}
+  <div class="content mb-16">
+    <h1 class="mb-8 text-2xl">Menu...</h1>
+    <Dropdown
+      label="Dropdown"
+      {items}
+      inline />
+  </div>
+
+  <div class="content">
+    <h1 class="mb-8 text-2xl">Select...</h1>
+    <Select />
   </div>
 </main>

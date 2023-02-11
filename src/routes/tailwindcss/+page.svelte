@@ -15,7 +15,7 @@
   const title = 'DAKS • Tailwind CSS';
   const description = 'фреймворк компонующий CSS классы для создания любого дизайна Tailwind CSS';
 
-  onMount(() => document?.lazyloadInstance?.update());
+  onMount(() => document?.lazyload.update());
 </script>
 
 <YandexMetrikaHit

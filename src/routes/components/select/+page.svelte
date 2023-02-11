@@ -2,11 +2,10 @@
   import { onMount } from 'svelte';
   import { YandexMetrikaHit, Select } from 'daks-svelte';
 
-
   const title = 'DAKS • Dropdown Select';
   const description = 'DAKS: dropdown select';
 
-  onMount(() => document?.lazyloadInstance?.update());
+  onMount(() => document?.lazyload?.update());
 </script>
 
 <YandexMetrikaHit
@@ -15,17 +14,11 @@
 
 <main itemprop="mainContentOfPage">
   <header class="content">
-    <h1 class="title mb-2">Dropdown Select</h1>
+    <h1 class="title mb-2">Select</h1>
   </header>
 
-  <section class="content mb-16">
+  <section class="content">
     <h1 class="mb-8 text-2xl">Select...</h1>
     <Select />
   </section>
-
-  <div class="content space-y-4">
-    {#each Array(21) as val, key}
-      <div>{key + 1} {val || '...'}</div>
-    {/each}
-  </div>
 </main>

@@ -1,19 +1,20 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { YandexMetrikaHit, Dropdown, DropdownWrapper, type NavItem } from 'daks-svelte';
+  import scroll from 'daks-svelte/utils/scroll';
+
 
   const items: NavItem[] = [
-    { label: 'Link 10', href: '#__8' },
-    { label: 'Button 0', handle: () => alert('handle click 0') },
-    { label: 'Link 50', href: '#__48' },
-    { label: 'Button 1', handle: () => alert('handle click 1') },
-    { label: 'Link 80', href: '#__78' }
+    { label: 'Link', href: './#' },
+    { label: 'Button', handle: () => setTimeout(() => alert('Handle 0'), 300) },
+    { label: 'Link 80', href: '#__78' },
+    { label: 'Button 80', handle: () => setTimeout(() => scroll.toobj('#__80', -48), 300) }
   ];
 
   const title = 'DAKS • Dropdown Menu';
   const description = 'DAKS: dropdown Menu';
 
-  onMount(() => document?.lazyloadInstance?.update());
+  onMount(() => document?.lazyload?.update());
 </script>
 
 <YandexMetrikaHit
@@ -22,12 +23,12 @@
 
 <main itemprop="mainContentOfPage">
   <header class="content">
-    <h1 class="title">Dropdown Menu</h1>
+    <h1 class="title">Menu</h1>
   </header>
 
   <div
     id="dropdown"
-    class="content flex justify-between mb-16 uppercase">
+    class="content flex justify-center gap-8 mb-16 uppercase">
     <Dropdown
       let:id
       let:hidden
@@ -42,33 +43,19 @@
           shadow-lg shadow-gray-600 lg:shadow-none lg:drop-shadow-md
           rounded-md focus:outline-none"
         classLink="
+          py-2 px-4 
           hover:text-sky-500 dark:hover:text-sky-300
           hover:bg-gray-500/50"
         {items} />
     </Dropdown>
     <Dropdown
-      let:id
-      let:hidden
-      class="px-4 py-2 rounded-sm drop-shadow-sm"
-      label="Dropdown 1">
-      <DropdownWrapper
-        {id}
-        {hidden}
-        class="
-          right-0 mt-1 text-right
-          bg-neutral-50/95 dark:bg-slate-700/95
-          shadow-lg shadow-gray-600 lg:shadow-none lg:drop-shadow-md
-          rounded-md focus:outline-none"
-        classLink="
-          hover:text-sky-500 dark:hover:text-sky-300
-          hover:bg-gray-500/50"
-        {items} />
-    </Dropdown>
+      label="Dropdown 1"
+      {items} />
   </div>
 
   <div class="content space-y-8">
     {#each Array(99) as val, key}
-      <div id="__{key}">{key + 1} {val || '...'}</div>
+      <div id="__{key}">{key} {val || '...'}</div>
     {/each}
   </div>
 </main>

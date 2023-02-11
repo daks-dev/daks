@@ -9,6 +9,7 @@
     "round-check-box",
     "round-check-box-outline-blank",
     "round-chevron-right",
+    "round-error-outline",
     "round-menu",
     "round-minus",
     "round-more-vert",
@@ -21,9 +22,12 @@
     "twotone-light-mode"
   ],
   "line-md": [
+    "alert-circle-twotone",
     "github-loop",
     "home-simple",
-    "home-simple-twotone"
+    "home-simple-twotone",
+    "moon-to-sunny-outline-loop-transition",
+    "sunny-outline-to-moon-loop-transition"
   ],
   "mdi": [
     "transfer-up"

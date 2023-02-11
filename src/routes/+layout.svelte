@@ -1,6 +1,12 @@
 <script lang="ts">
-  import LazyLoad from 'vanilla-lazyload';
-  import { YandexMetrikaInit, RouteTransition, Footer, Navbar, ScreenBlock } from 'daks-svelte';
+  import {
+    lazyload,
+    YandexMetrikaInit,
+    RouteTransition,
+    Footer,
+    Navbar,
+    ScreenBlock
+  } from 'daks-svelte';
 
   import '../app.css';
   import '$iconify';
@@ -16,11 +22,7 @@
       localStorage.setItem('color-theme', 'dark');
       document.documentElement.classList.add('dark');
     }
-    if (!document.lazyloadInstance)
-      document.lazyloadInstance = new LazyLoad({
-        // use_native: true,
-        threshold: 0
-      });
+    document.lazyload ??= lazyload();
   }
 </script>
 
@@ -48,9 +50,7 @@
 
 <Footer
   class="bg-neutral-200/50 dark:bg-inherit"
-  {...nav.footer}>
-  DAKS&nbsp;DEV
-</Footer>
+  {...nav.footer} />
 
 <Navbar
   class="bg-neutral-50 dark:bg-inherit

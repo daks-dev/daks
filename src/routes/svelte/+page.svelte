@@ -5,7 +5,7 @@
   const title = 'DAKS • Svelte';
   const description = 'Фреймворк разработки кибернетически улучшенных веб-приложений Svelte';
 
-  onMount(() => document?.lazyloadInstance?.update());
+  onMount(() => document?.lazyload.update());
 </script>
 
 <YandexMetrikaHit

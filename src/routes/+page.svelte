@@ -5,7 +5,7 @@
   const title = 'DAKS • WEB разработка';
   const description = 'DAks DEV: WEB разработка HTML, JS, CSS, Svelte, Tailwind CSS';
 
-  onMount(() => document?.lazyloadInstance?.update());
+  onMount(() => document?.lazyload.update());
 </script>
 
 <YandexMetrikaHit
