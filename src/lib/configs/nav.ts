@@ -14,12 +14,16 @@ const config = {
         label: 'Components',
         links: [
           {
-            href: '/carousel',
-            label: 'Carousel'
+            href: '/gallery',
+            label: 'Gallery'
           },
           {
             href: '/lightbox',
             label: 'Lightbox'
+          },
+          {
+            href: '/carousel',
+            label: 'Carousel'
           },
           {
             href: '/menu',

@@ -1,4 +1,4 @@
-/* @import 'daks-svelte/fonts/open-sans/variable'; */
+@import 'daks-svelte/fonts/open-sans/variable';
 @import 'daks-svelte/tailwindcss';
 
 @layer base {

@@ -1,9 +1,8 @@
 
 import type { Handle } from '@sveltejs/kit';
-import _handle from 'daks-svelte/app/hooks.server';
+import { iconkit, hooks } from 'daks-svelte/server';
 
-
-import.meta.env.DEV && (await import('daks-svelte/ui/iconify/server'));
+import.meta.env.DEV && iconkit();
 
 const redirects: any = {
   '/carousel': '/components/carousel',
@@ -19,5 +18,5 @@ export const handle: Handle = async ({ event, resolve }) => {
       }
     });
   }
-  return await _handle({ event, resolve });
+  return await hooks({ event, resolve });
 };
