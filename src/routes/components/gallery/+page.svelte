@@ -18,14 +18,14 @@
 
 <main itemprop="mainContentOfPage">
   <header class="content">
-    <h1 class="title">DEBUG</h1>
+    <h1 class="title">Gallery</h1>
   </header>
 
   <Async
   let:value
   {getter}>
     <GalleryKit
-      class="container gap-12 lg:grid-cols-2 2xl:grid-cols-3"
+      class="container gap-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
       classes={{figure: 'items-center', image: 'mb-4', caption: 'text-center'}}
       {...value}
       grid

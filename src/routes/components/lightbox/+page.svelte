@@ -1,11 +1,10 @@
 <script lang="ts">
   import { YandexMetrikaHit, Async, LightboxKit } from 'daks-svelte';
-  import { sources, squares, labels } from 'daks-svelte/assets/images/gallery';
+  import { sources, squares } from 'daks-svelte/assets/images/gallery';
 
   const getter = async () => ({
     images: await sources(),
-    thumbnails: await squares(),
-    labels
+    thumbnails: await squares()
   });
 
   const title = 'DAKS • Lightbox';
@@ -25,9 +24,8 @@
     let:value
     {getter}>
   <LightboxKit
-    class="container gap-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
+    class="container gap-8"
     {...value}
-    grid
     rounded
     shadow />
     </Async>
