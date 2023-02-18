@@ -1,12 +1,12 @@
 import { promises as fs } from 'fs';
 import { resolve } from 'path';
 
-import app from '$lib/configs/app';
+import app from '$configs/app';
 const { id, scope, name, shortName, description, display, backgroundColor, themeColor } = app;
 
 const pkg = JSON.parse(await fs.readFile(resolve(process.cwd(), 'package.json'), 'utf8'));
 
-const url = new URL(import.meta.env.VITE_APP_CANONICAL);
+const pathname = process.env.APP_CANONICAL ? new URL(process.env.APP_CANONICAL).pathname : './';
 
 const any = [128, 192, 256, 384, 512];
 const maskable = [192, 384, 512];
@@ -41,7 +41,7 @@ const data = {
   description: description,
   icons: icons,
   id: id,
-  start_url: url.pathname,
+  start_url: pathname,
   scope: scope,
   display: display,
   background_color: backgroundColor,

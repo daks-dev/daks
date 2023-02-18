@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import { resolve } from 'path';
 
-import app from '$lib/configs/app';
+import app from '$configs/app';
 
 const pkg = JSON.parse(await fs.readFile(resolve(process.cwd(), 'package.json'), 'utf8'));
 const { version } = pkg;

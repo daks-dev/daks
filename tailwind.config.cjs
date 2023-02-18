@@ -6,8 +6,8 @@ module.exports = {
   ],
 
   presets: [
-    require('daks-svelte/assets/tailwindcss/presets/font-family.cjs'),
-    require('daks-svelte/assets/tailwindcss/presets/common.cjs')
+    require('daks-svelte/tailwindcss/presets/font-family.cjs'),
+    require('daks-svelte/tailwindcss/presets/common.cjs')
   ]
 
   // theme: { extend: {} }

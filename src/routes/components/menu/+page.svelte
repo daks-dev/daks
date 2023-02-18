@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { YandexMetrikaHit, Dropdown, DropdownWrapper, type NavItem } from 'daks-svelte';
-  import scroll from 'daks-svelte/utils/scroll';
+  import scroll from 'daks-svelte/dist/utils/scroll';
 
 
   const items: NavItem[] = [

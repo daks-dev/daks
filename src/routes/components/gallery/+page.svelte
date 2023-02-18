@@ -1,11 +1,9 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from 'daks-svelte';
-  import { Async, GalleryKit } from 'daks-svelte';
-  import { squares, labels } from 'daks-svelte/assets/images/gallery';
+  import { YandexMetrikaHit, Async, GalleryKit, gallery } from 'daks-svelte';
 
   const getter = async () => ({
-    images: await squares(),
-    labels
+    images: await gallery.squares(),
+    labels: gallery.labels
   });
 
   const title = 'DAKS • Gallery';
@@ -22,16 +20,20 @@
   </header>
 
   <Async
-  let:value
-  {getter}>
+    let:value
+    {getter}>
     <GalleryKit
-      class="container gap-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
-      classes={{figure: 'items-center', image: 'mb-4', caption: 'text-center'}}
+      class="
+        wrapper
+        sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8"
+      classes={{}}
       {...value}
       grid
+      centered
+      expanded
       rounded
       shadow
       scale
-      grayscale />
+      invert />
   </Async>
 </main>

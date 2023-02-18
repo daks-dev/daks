@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { DEV } from 'esm-env';
   import { Icon } from 'daks-svelte';
   import Bundle from './Bundle.svelte';
 
@@ -47,7 +48,7 @@
     </a>
   </header>
 
-  {#if import.meta.env?.DEV}
+  {#if DEV}
     <div class="content flex justify-start items-center mb-8">
       <button
         on:click|preventDefault={upload}

@@ -1,4 +1,5 @@
 <script lang="ts">
+import { BROWSER } from 'esm-env';
   import {
     lazyload,
     YandexMetrikaInit,
@@ -14,10 +15,10 @@
   import type { PageData } from './$types';
   export let data: PageData;
 
-  import { app, nav } from '$lib/configs';
+  import { app, nav } from '$configs';
 
   // window.matchMedia('(prefers-color-scheme: dark)').matches
-  if (!import.meta.env.SSR) {
+  if (BROWSER) {
     if (!('color-theme' in localStorage)) {
       localStorage.setItem('color-theme', 'dark');
       document.documentElement.classList.add('dark');
@@ -56,7 +57,8 @@
   class="bg-neutral-50 dark:bg-inherit
          onscroll:bg-neutral-50/95 dark:onscroll:bg-slate-700/95
          shadow-sm dark:shadow-md onscroll:shadow-lg"
-  {...nav.navbar} />
+  {...nav.navbar}
+  centered />
 
 <ScreenBlock class="bg-neutral-100 dark:bg-gray-800" />
 
