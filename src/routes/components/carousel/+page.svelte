@@ -1,9 +1,8 @@
 <script lang="ts">
   import { fade, blur, slide } from 'svelte/transition';
   import { linear, sineInOut, quadInOut } from 'svelte/easing';
+  import { YandexMetrikaHit, Icon } from 'daks-svelte';
   import {
-    YandexMetrikaHit,
-    Icon,
     Carousel,
     BagePlaceholder,
     ImagePlaceholder,
@@ -57,7 +56,7 @@
 
   let count = 0;
   let duration = 3000;
-  let delay = 1000;
+  let delay = 2000;
 
   let easing = 0;
   $: getEasing = () => {
@@ -65,9 +64,9 @@
       case 1:
         return sineInOut;
       case 2:
-        return quadInOut;
-      default:
         return linear;
+      default:
+        return quadInOut;
     }
   };
   $: getEasingName = () => {
@@ -75,9 +74,9 @@
       case 1:
         return 'sineInOut';
       case 2:
-        return 'quadInOut';
-      default:
         return 'linear';
+      default:
+        return 'quadInOut';
     }
   };
 
@@ -89,14 +88,15 @@
 
   let carousel0: SvelteComponent;
   let carousel1: SvelteComponent;
-  const init = () => {
-    carousel0?.init();
-    carousel1?.init();
+  const start = () => {
+    autoplay || (stream = false);
     if (stream) {
-      autoplay = true;
       duration = 7000;
-      easing = 0;
+      delay = 0;
+      easing = 2;
     }
+    carousel0?.start();
+    carousel1?.start();
   };
   const reset = () => {
     carousel0?.reset(0);
@@ -126,14 +126,15 @@
       <label>
         <input
           bind:checked={stream}
-          on:change={init}
-          type="checkbox" />
+          on:change={start}
+          type="checkbox"
+          disabled={!autoplay} />
         stream
       </label>
       <label>
         <input
           bind:checked={autoplay}
-          on:change={init}
+          on:change={start}
           type="checkbox"
           disabled={stream} />
         autoplay
@@ -141,7 +142,7 @@
       <label>
         <input
           bind:checked={lazyload}
-          on:change={init}
+          on:change={start}
           type="checkbox" />
         lazyload
       </label>
@@ -164,7 +165,13 @@
           type="range"
           min="1000"
           max="20000"
-          step="1000" />
+          step="1000"
+          list="duration" />
+        <datalist id="duration">
+          {#each Array(20) as val, key}
+            <option value={(key + 1) * 1000} />
+          {/each}
+        </datalist>
       </label>
       <label class="flex flex-col">
         delay: {@html stream ? '&mdash;' : `${delay / 1000} sec`}
@@ -174,18 +181,29 @@
           min="0"
           max="10000"
           step="1000"
+          list="delay"
           disabled={stream} />
+        <datalist id="delay">
+          {#each Array(11) as val, key}
+            <option value={key * 1000} />
+          {/each}
+        </datalist>
       </label>
       <label class="flex flex-col">
         easing: {getEasingName()}
         <input
           bind:value={easing}
-          on:change={init}
           type="range"
           min="0"
           max="2"
           step="1"
+          list="easing"
           disabled={stream} />
+        <datalist id="easing">
+          {#each Array(3) as val, key}
+            <option value={key} />
+          {/each}
+        </datalist>
       </label>
     </div>
 
@@ -194,14 +212,20 @@
       content mb-16
       grid grid-cols-none sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <label class="flex flex-col">
-        count: {count || `${show(innerWidth)} [auto]`}
+        count: {count || 'auto'}
         <input
           bind:value={count}
           on:change={reset}
           type="range"
           min="0"
           max="5"
-          step="1" />
+          step="1"
+          list="count" />
+        <datalist id="count">
+          {#each Array(6) as val, key}
+            <option value={key} />
+          {/each}
+        </datalist>
       </label>
       <label class="flex flex-col">
         aspect ratio: {getRatioName()}
@@ -210,7 +234,13 @@
           type="range"
           min="0"
           max="5"
-          step="1" />
+          step="1"
+          list="ratio" />
+        <datalist id="ratio">
+          {#each Array(6) as val, key}
+            <option value={key} />
+          {/each}
+        </datalist>
       </label>
     </div>
   {/if}
