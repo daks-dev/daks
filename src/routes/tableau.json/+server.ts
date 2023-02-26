@@ -20,9 +20,10 @@ const data = {
 
 export const prerender = true;
 
-export const GET = function get({ setHeaders }: unknown) {
-  setHeaders({
-    'content-type': 'application/json'
+export async function GET() {
+  return new Response(JSON.stringify(data), {
+    headers: {
+      'Content-Type': 'application/json'
+    }
   });
-  return new Response(JSON.stringify(data));
-};
+}

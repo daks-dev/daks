@@ -1,11 +1,12 @@
 import { building } from '$app/environment';
-import { iconset } from 'daks-svelte/dist/server';
+import { iconset } from 'daks-svelte/server';
 
 export const prerender = false;
 
-export const GET = async function get({ setHeaders }: unknown) {
-  setHeaders({
-    'content-type': 'application/json'
+export async function GET() {
+  return new Response(JSON.stringify(building ? null : await iconset()), {
+    headers: {
+      'Content-Type': 'application/json'
+    }
   });
-  return new Response(JSON.stringify(building ? null : await iconset()));
-};
+}

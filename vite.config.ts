@@ -1,5 +1,5 @@
 import { sveltekit } from '@sveltejs/kit/vite';
-import pluginImagetools from 'daks-svelte/dist/vite/plugin-imagetools';
+import pluginImagetools from 'daks-svelte/vite/plugin-imagetools';
 import type { UserConfig } from 'vite';
 
 const config: UserConfig = {

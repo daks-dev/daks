@@ -2,9 +2,8 @@
   import { YandexMetrikaHit, Async, LightboxKit, gallery } from 'daks-svelte';
 
   const getter = async () => ({
-    images: await gallery.sources(),
-    thumbnails: await gallery.squares(),
-    labels: gallery.labels
+    images: await gallery.getter(gallery.sources),
+    thumbnails: await gallery.getter(gallery.squares)
   });
 
   const title = 'DAKS • Lightbox';

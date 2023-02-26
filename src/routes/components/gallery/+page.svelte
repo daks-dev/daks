@@ -2,8 +2,7 @@
   import { YandexMetrikaHit, Async, GalleryKit, gallery } from 'daks-svelte';
 
   const getter = async () => ({
-    images: await gallery.squares(),
-    labels: gallery.labels
+    dataset: await gallery.getter(gallery.squares) // gallery.squares()
   });
 
   const title = 'DAKS • Gallery';

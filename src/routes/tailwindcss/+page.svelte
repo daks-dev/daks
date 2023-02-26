@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { YandexMetrikaHit, Dropdown, Select, type NavItem } from 'daks-svelte';
+  import { YandexMetrikaHit, Dropdown, Select } from 'daks-svelte';
+  import type { NavItem } from 'daks-svelte/types';
 
   const items: NavItem[] = [
     { label: 'Link 0 0', href: '#' },

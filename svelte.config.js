@@ -33,7 +33,7 @@ const config = {
       serviceWorker: 'node_modules/daks-svelte/app/service-worker'
     }
 
-    // inlineStyleThreshold: 8192
+    // inlineStyleThreshold: Infinity
   }
 };
 

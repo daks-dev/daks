@@ -1,14 +1,17 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { YandexMetrikaHit, Dropdown, DropdownWrapper, type NavItem } from 'daks-svelte';
-  import scroll from 'daks-svelte/dist/utils/scroll';
+  import { YandexMetrikaHit, Dropdown, DropdownWrapper, scroll } from 'daks-svelte';
+  import type { NavItem } from 'daks-svelte/types';
 
 
   const items: NavItem[] = [
     { label: 'Link', href: './#' },
     { label: 'Button', handle: () => setTimeout(() => alert('Handle 0'), 300) },
     { label: 'Link 80', href: '#__78' },
-    { label: 'Button 80', handle: () => setTimeout(() => scroll.toobj('#__80', -48), 300) }
+    {
+      label: 'Button 80',
+      handle: () => setTimeout(() => scroll.toObj('#__80', { offset: -45, duration: 3000 }))
+    }
   ];
 
   const title = 'DAKS • Dropdown Menu';

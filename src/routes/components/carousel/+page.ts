@@ -1,5 +1,5 @@
 import { gallery } from 'daks-svelte';
 
 export const load = async () => ({
-  images: await gallery.screens()
+  dataset: await gallery.screens()
 });

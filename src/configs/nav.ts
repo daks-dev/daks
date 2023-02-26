@@ -1,4 +1,6 @@
-const config = {
+import type { NavSite } from 'daks-svelte/types';
+
+const config: NavSite = {
   navbar: {
     links: [
       {
@@ -33,19 +35,20 @@ const config = {
             href: '/select',
             label: 'Selet'
           }
-        ],
-        pages: [
-          '/tailwindcss',
-          '/svelte',
-          '/components',
-          '/components/carousel',
-          '/components/lightbox',
-          '/components/dropdown',
-          '/components/select'
         ]
       }
+    ],
+    pages: [
+      '/svelte',
+      '/tailwindcss',
+      '/components',
+      '/components/carousel',
+      '/components/lightbox',
+      '/components/gallery',
+      '/components/menu',
+      '/components/select'
     ]
-  },
+},
   footer: {
     copylink: {
       href: '/',
@@ -60,8 +63,16 @@ const config = {
         href: '/admin',
         label: 'ic:outline-settings'
       }
+    ],
+    pages: [
+      '/privacy'
     ]
-  }
+    }
 };
+
+export const map = [
+  ...(config.navbar.pages ?? config.navbar.links.map((el) => el.href)),
+  ...(config.footer.pages ?? [])
+];
 
 export default config;
