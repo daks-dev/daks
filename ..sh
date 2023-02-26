@@ -41,7 +41,10 @@ until [ $ac = "-" ]; do
 
         "4")
             echo -e "> svelte:check";
-            npm run check;;
+            rm -rf .svelte-kit/{*,.*};
+            rm -rf build/{*,.*};
+            rm -rf node_modules/{*,.*};
+            rm -f package-lock.json;;
 
         "5")
             echo -e "> vite:build";
