@@ -41,10 +41,7 @@ until [ $ac = "-" ]; do
 
         "4")
             echo -e "> svelte:check";
-            rm -rf .svelte-kit/{*,.*};
-            rm -rf build/{*,.*};
-            rm -rf node_modules/{*,.*};
-            rm -f package-lock.json;;
+            npm run check;;
 
         "5")
             echo -e "> vite:build";
@@ -56,7 +53,10 @@ until [ $ac = "-" ]; do
 
         "0")
             echo -e "> clean";
-            npm run clean;;
+            rm -rf .svelte-kit/{*,.*};
+            rm -rf build/{*,.*};
+            rm -rf node_modules/{*,.*};
+            rm -f package-lock.json;;
 
         "m")
             echo -e "> memcached:restart";
