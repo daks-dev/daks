@@ -14,8 +14,8 @@
     }
   ];
 
-  const title = 'DAKS • Dropdown Menu';
-  const description = 'DAKS: dropdown Menu';
+  const title = 'DAKS • Dropdown';
+  const description = 'DAKS: dropdown';
 
   onMount(() => document?.lazyload?.update());
 </script>
@@ -26,7 +26,7 @@
 
 <main itemprop="mainContentOfPage">
   <header class="content">
-    <h1 class="title">Menu</h1>
+    <h1 class="title">Dropdown</h1>
   </header>
 
   <div

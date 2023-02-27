@@ -29,12 +29,16 @@ const config: NavSite = {
             label: 'Gallery'
           },
           {
-            href: '/menu',
-            label: 'Menu'
+            href: '/dropdown',
+            label: 'Dropdown'
           },
           {
             href: '/select',
             label: 'Selet'
+          },
+          {
+            href: '/yandex',
+            label: 'Yandex'
           }
         ]
       }
